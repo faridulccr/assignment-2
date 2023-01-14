@@ -12,8 +12,8 @@
 .container {
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 8.33% 80px;
+    margin: 0 auto 80px;
+    padding: 0 8.33%;
 }
 img {
     max-width: 100%;
@@ -51,6 +51,7 @@ p {
 header.container {
     background-color: rgba(255, 144, 14, 0.1);
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 header .menu-bar {
     display: flex;
@@ -83,11 +84,50 @@ Banner area styles
 .banner-content {
     max-width: 65%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 .banner-content .banner-title {
     font-weight: 700;
     font-size: 3.55rem;
     line-height: 1.17;
     margin-bottom: 20px;
+}
+.banner-area img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------------------
+    feature css style
+-----------------------*/
+.feature-sec {
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    align-items: center;
+}
+.feature-sec .feature-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.feature-sec .feature-img img {
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(0, 0, 0, 0.3);
+}
+.feature-sec .feature-content h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.18;
+    color: #727272;
+    margin-bottom: 20px;
+}
+.feature-content h2 .of-our-text {
+    font-weight: 700;
+    color: #131313;
+}
+.feature-content h2 .feature-text {
+    font-weight: 700;
+    color: #ff900e;
 }
