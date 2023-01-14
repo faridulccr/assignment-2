@@ -100,34 +100,86 @@ Banner area styles
 /* ---------------------
     feature css style
 -----------------------*/
-.feature-sec {
+
+/* feature 1 styles */
+.feature-1 {
     padding-left: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
     align-items: center;
+    margin-bottom: 80px;
 }
-.feature-sec .feature-img {
+.feature-1 .feature-img-1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-.feature-sec .feature-img img {
+.feature-1 .feature-img-1 img {
     border-radius: 4px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(0, 0, 0, 0.3);
 }
-.feature-sec .feature-content h2 {
+.feature-1 .feature-content-1 h2 {
     font-weight: 500;
     font-size: 2.5rem;
     line-height: 1.18;
     color: #727272;
     margin-bottom: 20px;
 }
-.feature-content h2 .of-our-text {
+.feature-content-1 h2 .of-our-text {
     font-weight: 700;
     color: #131313;
 }
-.feature-content h2 .feature-text {
+.feature-content-1 h2 .feature-text {
     font-weight: 700;
     color: #ff900e;
+}
+
+/* feature 2 styles */
+.feature-2 {
+    display: grid;
+    grid-template-columns: 40% 58%;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-content-2 > h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.18;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #ff900e;
+}
+.feature-content-2 > p {
+    margin-bottom: 30px;
+}
+.feature-content-2 .feature-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.feature-content-2 .feature-card h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+.feature-img-2 {
+    padding: 0 0 40px 50px;
+    position: relative;
+}
+.feature-img-2 img {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1),
+        -5px -5px 20px rgba(0, 0, 0, 0.1);
+}
+.feature-img-2 .experience {
+    padding: 20px 25px;
+    color: #fff;
+    background-color: #ff900e;
+    width: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
