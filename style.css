@@ -1,4 +1,5 @@
 /* google font import  */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
 
 /*-------------------------
     Common css styles
@@ -7,7 +8,10 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* font-family: ; */
+    font-family: "Work Sans", sans-serif;
+}
+.hide {
+    display: none;
 }
 .container {
     width: 100%;
@@ -37,12 +41,18 @@ p {
     color: #fff;
     border-radius: 8px;
     padding: 20px 25px;
-    font-size: 20px;
+    font-size: 1.1rem;
     line-height: 23px;
     font-weight: 600;
     border: none;
     cursor: pointer;
     margin-top: 20px;
+}
+.section-title {
+    font-size: 2.5rem;
+    line-height: 1.18;
+    font-weight: 700;
+    color: #131313;
 }
 
 /* ---------------------
@@ -62,6 +72,7 @@ header .menu-bar {
     font-weight: 700;
     font-size: 2.5rem;
     line-height: 1.18;
+    color: #ff900e;
 }
 .menu-bar nav ul {
     display: flex;
@@ -73,6 +84,11 @@ nav ul li a {
     color: #424242;
     font-weight: 700;
     font-size: 1rem;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: #ff900e;
+    font-size: 1.2rem;
 }
 
 /* --------------------
@@ -166,20 +182,268 @@ Banner area styles
     margin-bottom: 20px;
 }
 .feature-img-2 {
-    padding: 0 0 40px 50px;
+    padding-left: 50px;
     position: relative;
 }
 .feature-img-2 img {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1),
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2),
         -5px -5px 20px rgba(0, 0, 0, 0.1);
 }
 .feature-img-2 .experience {
     padding: 20px 25px;
-    color: #fff;
     background-color: #ff900e;
+    text-align: center;
     width: fit-content;
     border-radius: 5px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -50px;
+    /* transform: translateY(40%); */
+}
+.feature-img-2 .experience h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+.feature-img-2 .experience p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* ---------------------
+    fact area css style
+-----------------------*/
+.fact-area > p {
+    width: 50%;
+    margin: 20px 0 25px;
+}
+.fact-area .fact-card-container {
+    display: flex;
+    justify-content: space-around;
+}
+.fact-card-container .fact-card {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #ff900e;
+    border-bottom: 1px solid #424242;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s linear;
+}
+.fact-card-container .fact-card img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+    transition: transform 3s linear;
+}
+.fact-card-container .fact-card h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.18;
+    transition: transform 2.5s linear;
+}
+.fact-card-container .fact-card p {
+    transition: transform 2s linear;
+}
+.fact-card-container .fact-card:hover {
+    transform: rotate(180deg);
+}
+.fact-card-container .fact-card:hover img {
+    transform: rotate(180deg) translateY(-100px);
+}
+.fact-card-container .fact-card:hover h1 {
+    transform: rotate(180deg) translateY(25px);
+}
+.fact-card-container .fact-card:hover p {
+    transform: rotate(180deg) translateY(110px);
+}
+
+/* -----------------------
+    project area styles
+--------------------------*/
+.project-area .project-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    margin-top: 25px;
+}
+.project-area .project-card-container .project-card {
+    text-align: center;
+}
+.project-card-container .project-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+.project-card-container .project-card button {
+    border: 0;
+    border-radius: 5px;
+    width: 160px;
+    height: 60px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ff900e;
+    color: #fff;
+    margin: 30px auto 0;
+}
+.project-card button i {
+    margin-left: 10px;
+}
+
+/* -----------------------
+    Sponsor area styles
+--------------------------*/
+.sponsor-area .section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sponsor-area > p {
+    width: 50%;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.sponsor-area .sponsor-logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sponsor-area .sponsor-logo-container img {
+    width: 170px;
+    height: 50px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+/* -------------------------
+    Footer area css styles
+----------------------------*/
+footer p {
+    background-color: rgba(255, 144, 14, 0.1);
+    text-align: center;
+    padding: 30px 0;
+}
+
+/*--------------------------------
+    Mobile responsive style
+----------------------------------*/
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 0 2%;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 15px 20px;
+    }
+
+    /*---------- Header styles ---------*/
+    header .menu-bar {
+        display: block;
+    }
+    .menu-bar .header-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .menu-bar nav ul {
+        display: block;
+        text-align: center;
+    }
+    .menu-bar nav ul li {
+        margin-bottom: 20px;
+    }
+
+    /* ------ banner area styles -------- */
+    .banner-content {
+        max-width: 100%;
+    }
+    .banner-content .banner-title {
+        font-size: 2rem;
+    }
+
+    /* ---- feature 1 styles ----- */
+    .feature-1 {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        column-gap: 0;
+    }
+    .feature-1 .feature-content-1 {
+        margin-bottom: 30px;
+    }
+    .feature-1 .feature-content-1 h2 {
+        font-size: 1.8rem;
+    }
+    .feature-1 .feature-img-1 {
+        display: block;
+        width: 100%;
+    }
+    .feature-1 .feature-img-1 img {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /*----- feature 2 styles ------*/
+    .feature-2 {
+        display: block;
+    }
+    .feature-img-2 {
+        padding-left: 0;
+    }
+    .feature-img-2 .experience {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .feature-img-2 .experience h1 {
+        font-size: 2rem;
+        color: #fff;
+    }
+    .feature-img-2 .experience p {
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    /* ----- fact area style -----*/
+    .container.fact-area {
+        margin-top: 150px;
+    }
+    .fact-area > p {
+        width: 100%;
+    }
+    .fact-area .fact-card-container {
+        display: block;
+    }
+    .fact-card-container .fact-card {
+        margin: 0 auto 20px;
+        width: 100%;
+    }
+
+    /*--- project area styles ----*/
+    .project-area .project-card-container {
+        display: block;
+    }
+    .project-card-container .project-card h3 {
+        font-size: 1rem;
+    }
+    .project-area .project-card-container .project-card {
+        margin-bottom: 50px;
+    }
+
+    /* --- sponsor area ----*/
+    .sponsor-area > p {
+        width: 100%;
+    }
+    .sponsor-area .sponsor-logo-container {
+        flex-direction: column;
+    }
+    .sponsor-area .sponsor-logo-container img {
+        margin-bottom: 35px;
+    }
 }
